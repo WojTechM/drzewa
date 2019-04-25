@@ -4,7 +4,7 @@ package com.github.wojtechm.drzewa.zadanie_pierwsze;
  * @author Makiela Wojciech
  */
 class PrzeszukiwanieWszerz {
-    public String czytajDrzewo(Węzeł symetryczne) {
+    String czytajDrzewo(Węzeł korzeń) {
         return null;
     }
 }
