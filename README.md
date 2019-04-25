@@ -22,6 +22,7 @@ Przykładowy kawałek kodu jak to osiągnąć:
 ```
     
 #Protip
+
 Przeszukiwanie w głąb bardzo łatwo zaimplementować z wykorzystaniem rekurencji.
 Przeszukiwanie wszerz natomiast łatwo zrozumieć przy podejściu iteracyjnym.
 
