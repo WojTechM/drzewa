@@ -1,5 +1,6 @@
-package com.github.wojtechm.drzewa;
+package com.github.wojtechm.drzewa.zadanie_pierwsze;
 
+import com.github.wojtechm.drzewa.zadanie_pierwsze.DrzewaDoTestowania;
 import org.testng.annotations.Test;
 
 /**

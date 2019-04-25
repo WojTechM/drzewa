@@ -1,4 +1,4 @@
-package com.github.wojtechm.drzewa;
+package com.github.wojtechm.drzewa.zadanie_pierwsze;
 
 /**
  * @author Makiela Wojciech
