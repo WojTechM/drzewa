@@ -11,7 +11,7 @@ class Węzeł {
     Węzeł lewy;
     Węzeł prawy;
 
-    public Węzeł(int value) {
+    Węzeł(int value) {
         this.wartość = value;
     }
 
