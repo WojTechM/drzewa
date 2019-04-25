@@ -1,12 +1,13 @@
-package com.github.wojtechm.drzewa;
+package com.github.wojtechm.drzewa.zadanie_pierwsze;
 
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
 
 /**
  * @author Makiela Wojciech
  */
-@Test
-class TestyWGłąb {
+public class PrzeszukiwanieWGłąbDrzewa {
 
     @Test
     public void czyDziałaNaSymetrycznymDrzewie() {

@@ -1,4 +1,4 @@
-package com.github.wojtechm.drzewa;
+package com.github.wojtechm.drzewa.zadanie_pierwsze;
 
 import java.util.Objects;
 
@@ -11,7 +11,7 @@ class Węzeł {
     Węzeł lewy;
     Węzeł prawy;
 
-    public Węzeł(int value) {
+    Węzeł(int value) {
         this.wartość = value;
     }
 

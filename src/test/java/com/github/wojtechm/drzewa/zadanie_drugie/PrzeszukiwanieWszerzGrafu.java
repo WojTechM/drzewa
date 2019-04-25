@@ -1,30 +1,32 @@
-package com.github.wojtechm.drzewa;
+package com.github.wojtechm.drzewa.zadanie_drugie;
 
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
 
 /**
  * @author Makiela Wojciech
  */
-class TestyWszerz {
+public class PrzeszukiwanieWszerzGrafu {
 
     @Test
-    public void czyDziałaNaSymetrycznymDrzewie() {
+    public void czyDziałaNaGrafieIdącOdŚrodka() {
         // arrange
         PrzeszukiwanieWszerz wszerz = new PrzeszukiwanieWszerz();
-        String oczekiwane = "[5, 3, 7, 2, 4, 6, 8]";
+        String oczekiwane = "[0, 1, 2, 3, 4, 5, 6]";
         // act
-        String coDostałem = wszerz.czytajDrzewo(DrzewaDoTestowania.symetryczne);
+        String coDostałem = wszerz.czytajGraf(GrafyDoTestowania.korzeń1);
         // assert
         assert oczekiwane.equals(coDostałem) : String.format("Expected %s, got %s", oczekiwane, coDostałem);
     }
 
     @Test
-    public void czyDziałaNaNiesymetrycznymDrzewie() {
+    public void czyDziałaNaGrafieIdącOdBrzegu() {
         // arrange
         PrzeszukiwanieWszerz wszerz = new PrzeszukiwanieWszerz();
-        String oczekiwane = "[0, 2, 1, 4, 3, 6, 5]";
+        String oczekiwane = "[6, 1, 2, 0, 5, 3, 4]";
         // act
-        String coDostałem = wszerz.czytajDrzewo(DrzewaDoTestowania.niesymetryczne);
+        String coDostałem = wszerz.czytajGraf(GrafyDoTestowania.korzeń2);
         // assert
         assert oczekiwane.equals(coDostałem) : String.format("Expected %s, got %s", oczekiwane, coDostałem);
     }
