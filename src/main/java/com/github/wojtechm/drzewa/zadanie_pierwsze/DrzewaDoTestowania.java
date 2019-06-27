@@ -27,9 +27,28 @@ class DrzewaDoTestowania {
      */
     static Węzeł niesymetryczne;
 
+    /*
+
+        0
+         \
+          1
+           \
+            6
+           /
+          3
+         /
+        2
+         \
+          4
+           \
+            5
+     */
+    static Węzeł schodki;
+
     static {
         symetryczne = generujSymetryczne();
         niesymetryczne = generujNiesymetryczne();
+        schodki = generujSchodki();
     }
 
     private static Węzeł generujSymetryczne() {
@@ -50,6 +69,17 @@ class DrzewaDoTestowania {
         drzewo.dodaj(4);
         drzewo.dodaj(3);
         drzewo.dodaj(6);
+        drzewo.dodaj(5);
+        return drzewo.korzeń;
+    }
+
+    private static Węzeł generujSchodki() {
+        DrzewoBinarnychPoszukiwań drzewo = new DrzewoBinarnychPoszukiwań(0);
+        drzewo.dodaj(1);
+        drzewo.dodaj(6);
+        drzewo.dodaj(3);
+        drzewo.dodaj(2);
+        drzewo.dodaj(4);
         drzewo.dodaj(5);
         return drzewo.korzeń;
     }

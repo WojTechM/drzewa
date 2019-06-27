@@ -5,8 +5,8 @@ package com.github.wojtechm.drzewa.zadanie_drugie;
  */
 class GrafyDoTestowania {
 
-    static WęzełGrafu korzeń1;
-    static WęzełGrafu korzeń2;
+    static WęzełGrafu korzeń1; // zaczyna na węźle o wartości 0
+    static WęzełGrafu korzeń2; // zaczyna na węźle o wartości 6
 
     /*
      3   2
@@ -18,8 +18,7 @@ class GrafyDoTestowania {
        5
      */
     static {
-        korzeń1 = generujGraf(); // zaczyna w 0
-        korzeń2 = korzeń1.powiązane.get(0).powiązane.get(2); // zaczyna w 6
+        generujGraf();
     }
 
     private static WęzełGrafu generujGraf() {
@@ -30,6 +29,13 @@ class GrafyDoTestowania {
         WęzełGrafu węzeł4 = new WęzełGrafu(4);
         WęzełGrafu węzeł5 = new WęzełGrafu(5);
         WęzełGrafu węzeł6 = new WęzełGrafu(6);
+        powiążWęzły(węzeł0, węzeł1, węzeł2, węzeł3, węzeł4, węzeł5, węzeł6);
+        korzeń1 = węzeł0;
+        korzeń2 = węzeł6;
+        return węzeł0;
+    }
+
+    private static void powiążWęzły(WęzełGrafu węzeł0, WęzełGrafu węzeł1, WęzełGrafu węzeł2, WęzełGrafu węzeł3, WęzełGrafu węzeł4, WęzełGrafu węzeł5, WęzełGrafu węzeł6) {
         węzeł0.dodajWęzeł(węzeł1);
         węzeł0.dodajWęzeł(węzeł2);
         węzeł0.dodajWęzeł(węzeł3);
@@ -38,6 +44,5 @@ class GrafyDoTestowania {
         węzeł1.dodajWęzeł(węzeł5);
         węzeł1.dodajWęzeł(węzeł6);
         węzeł2.dodajWęzeł(węzeł6);
-        return węzeł0;
     }
 }
