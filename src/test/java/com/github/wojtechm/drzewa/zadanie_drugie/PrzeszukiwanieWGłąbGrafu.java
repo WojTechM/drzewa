@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
  */
 public class PrzeszukiwanieWGłąbGrafu {
 
+    private static final String WIADOMOŚĆ = "Oczekiwałem %s, dostałem %s";
+
     @Test
     public void czyDziałaNaGrafieIdącOdŚrodka() {
         // arrange
@@ -15,7 +17,7 @@ public class PrzeszukiwanieWGłąbGrafu {
         // act
         String coDostałem = wGłąb.czytajGraf(GrafyDoTestowania.korzeń1);
         // assert
-        assert oczekiwane.equals(coDostałem) : String.format("Expected %s, got %s", oczekiwane, coDostałem);
+        assert oczekiwane.equals(coDostałem) : String.format(WIADOMOŚĆ, oczekiwane, coDostałem);
     }
 
     @Test
@@ -26,6 +28,17 @@ public class PrzeszukiwanieWGłąbGrafu {
         // act
         String coDostałem = wGłąb.czytajGraf(GrafyDoTestowania.korzeń2);
         // assert
-        assert oczekiwane.equals(coDostałem) : String.format("Expected %s, got %s", oczekiwane, coDostałem);
+        assert oczekiwane.equals(coDostałem) : String.format(WIADOMOŚĆ, oczekiwane, coDostałem);
+    }
+
+    @Test
+    public void czyZwracaPustąTablicęGdyKorzeńJestNullem() {
+        // arrange
+        PrzeszukiwanieWGłąb wGłąb = new PrzeszukiwanieWGłąb();
+        String oczekiwane = "[]";
+        // act
+        String coDostałem = wGłąb.czytajGraf(null);
+        // assert
+        assert oczekiwane.equals(coDostałem) : String.format(WIADOMOŚĆ, oczekiwane, coDostałem);
     }
 }
